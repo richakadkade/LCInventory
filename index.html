@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Sign Up Form Concept</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+      <link rel="stylesheet" href="css/style.css">
+ 
+
+  
+</head>
+
+<body>
+  <div class="cotn_principal">
+<div class="cont_centrar">
+
+  <div class="cont_login">
+<div class="cont_info_log_sign_up">
+      <div class="col_md_login">
+<div class="cont_ba_opcitiy">
+        
+        <h2>LOGIN</h2>  
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
+  <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+  </div>
+  </div>
+<div class="col_md_sign_up">
+<div class="cont_ba_opcitiy">
+  <h2>SIGN UP</h2>
+
+  
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+  <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+</div>
+  </div>
+       </div>
+
+    
+    <div class="cont_back_info">
+       <div class="cont_img_back_grey">
+       <img src="http://www.industrytap.com/wp-content/uploads/2015/08/arizona.jpg" alt="" />
+       </div>
+       
+    </div>
+<div class="cont_forms" >
+    <div class="cont_img_back_">
+       <img src="http://www.industrytap.com/wp-content/uploads/2015/08/arizona.jpg" alt="" />
+       </div>
+ <div class="cont_form_login">
+<a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+   <h2>LOGIN</h2>
+ <input type="text" placeholder="Email" />
+<input type="password" placeholder="Password" />
+<button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+  </div>
+  
+
+
+ 
+
+<form action="login.php" method="post">
+   <div class="cont_form_sign_up">
+   
+<a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+     <h2>SIGN UP</h2>
+      
+<input type="email" name="email" placeholder="Enter your Email" required/>
+<input type="text" name="firstName" placeholder="First name" />
+<input type="text" name="lastName" placeholder="Last name" />
+<input type="password" id="password" name="password" placeholder="Password" required />
+<input type="password" id="confirm_password" name="conPassword" placeholder="Confirm Password" required/>
+<input type="submit" name="Sign Up"/><!--button class="btn_sign_up">SIGN UP</button> </input-->
+  </div>
+<form>
+    </div>
+    
+  </div>
+ </div>
+</div>
+<div class="alert alert-danger">
+    <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+  </div>'
+   <script>
+ var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+ </script>
+    <script  src="js/index.js"></script>
+
+</body>
+</html>
